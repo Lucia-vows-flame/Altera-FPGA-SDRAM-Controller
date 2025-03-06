@@ -1,0 +1,2195 @@
+{
+  "creator": "Yosys 0.48 (git sha1 aaa5347494801e9e3870b31387da59da24233f76, clang++ 18.1.2-wasi-sdk -O3)",
+  "modules": {
+    "sdram_init": {
+      "attributes": {
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "{workspace}/user/src/sdram_init.v:1.1-288.10"
+      },
+      "parameter_default_values": {
+        "AUTO_REFRESH": "0001",
+        "INIT_AUTO_REFRESH": "010",
+        "INIT_DONE": "100",
+        "INIT_IDLE": "000",
+        "INIT_LOAD_MODE_REGISTER": "111",
+        "INIT_PRE_CHARGE": "001",
+        "INIT_TMRD": "101",
+        "INIT_TRFC": "110",
+        "INIT_TRP": "011",
+        "LOAD_MODE_REGISTER": "0000",
+        "NOP": "0111",
+        "PRECHARGE": "0010",
+        "TMRD": "011",
+        "TRFC": "111",
+        "TRP": "010",
+        "WAIT_200US_MAX": "00000000000000000100111000100000"
+      },
+      "ports": {
+        "i_sysclk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "i_sysrst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "o_init_cmd": {
+          "direction": "output",
+          "bits": [ 4, "0", "0", "0" ]
+        },
+        "o_init_ba": {
+          "direction": "output",
+          "bits": [ 5, "0" ]
+        },
+        "o_init_addr": {
+          "direction": "output",
+          "bits": [ 6, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ]
+        },
+        "o_init_done": {
+          "direction": "output",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+        "$add${workspace}/user/src/sdram_init.v:153$10": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:153.48-153.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54 ]
+          }
+        },
+        "$add${workspace}/user/src/sdram_init.v:173$15": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:173.49-173.65"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 56, 57 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89 ]
+          }
+        },
+        "$add${workspace}/user/src/sdram_init.v:226$30": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:226.55-226.77"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 90 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 ]
+          }
+        },
+        "$auto$mem.cc:282:emit$37": {
+          "hide_name": 1,
+          "type": "$memrd_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000011",
+            "ARST_VALUE": "xxx",
+            "CE_OVER_SRST": "00000000000000000000000000000000",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "COLLISION_X_MASK": "",
+            "INIT_VALUE": "xxx",
+            "MEMID": "$auto$proc_rom.cc:155:do_switch$36",
+            "SRST_VALUE": "xxx",
+            "TRANSPARENCY_MASK": "",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:245.33-276.40"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "ARST": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input",
+            "SRST": "input"
+          },
+          "connections": {
+            "ADDR": [ 123, 124, 125 ],
+            "ARST": [ "0" ],
+            "CLK": [ "x" ],
+            "DATA": [ 126, 127, 128 ],
+            "EN": [ "1" ],
+            "SRST": [ "0" ]
+          }
+        },
+        "$auto$mem.cc:328:emit$38": {
+          "hide_name": 1,
+          "type": "$meminit",
+          "parameters": {
+            "ABITS": "00000000000000000000000000100000",
+            "MEMID": "$auto$proc_rom.cc:155:do_switch$36",
+            "PRIORITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000011",
+            "WORDS": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:245.33-276.40"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "DATA": "input"
+          },
+          "connections": {
+            "ADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "DATA": [ "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "0", "1" ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$103": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 129 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$108": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 130 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$113": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 131 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$83": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 132 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$88": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 133 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$93": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 134 ]
+          }
+        },
+        "$auto$proc_dff.cc:220:proc_dff$98": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 135 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:147$9": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:147.25-147.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "0", "0", "0", "0", "0", "1", "0", "0", "0", "1", "1", "1", "0", "0", "1" ],
+            "Y": [ 136 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:158$11": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:158.29-158.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+            "B": [ "1", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1", "1", "0", "0", "1" ],
+            "Y": [ 137 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:209$20": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:209.23-209.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 56, 57 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 138 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:210$22": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:210.23-210.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 56, 57 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 139 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:211$24": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:211.23-211.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 56, 57 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 140 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:220$28": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:220.25-220.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "Y": [ 141 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:224$29": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:224.25-224.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 142 ]
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:286$33": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:286.34-286.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 143 ]
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:143$8": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:143.20-143.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 144 ]
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:163$14": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:163.20-163.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 145 ]
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:216$27": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:216.20-216.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 146 ]
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:237$32": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:237.20-237.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 147 ]
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:61$2": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:61.20-61.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 148 ]
+          }
+        },
+        "$procdff$102": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:214.1-232.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 149 ],
+            "Q": [ 90 ]
+          }
+        },
+        "$procdff$107": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:161.1-175.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 150, 151, 152 ],
+            "Q": [ 55, 56, 57 ]
+          }
+        },
+        "$procdff$112": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000001111"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:141.1-155.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ],
+            "Q": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ]
+          }
+        },
+        "$procdff$117": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:59.1-138.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 168, 169, 170 ],
+            "Q": [ 123, 124, 125 ]
+          }
+        },
+        "$procdff$87": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 126 ],
+            "Q": [ 4 ]
+          }
+        },
+        "$procdff$92": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 127 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$procdff$97": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 128 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$procmux$41": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:224.25-224.58|{workspace}/user/src/sdram_init.v:224.22-231.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 90 ],
+            "B": [ 91 ],
+            "S": [ 142 ],
+            "Y": [ 171 ]
+          }
+        },
+        "$procmux$44": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:220.25-220.50|{workspace}/user/src/sdram_init.v:220.22-231.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 171 ],
+            "B": [ "0" ],
+            "S": [ 141 ],
+            "Y": [ 149 ]
+          }
+        },
+        "$procmux$47": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000101",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1", 172, 173, 174, "1" ],
+            "S": [ 175, 176, 177, 178, 179 ],
+            "Y": [ 180 ]
+          }
+        },
+        "$procmux$48_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 175 ]
+          }
+        },
+        "$procmux$49_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 176 ]
+          }
+        },
+        "$procmux$50_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 177 ]
+          }
+        },
+        "$procmux$51_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 178 ]
+          }
+        },
+        "$procmux$52_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:180.17-205.24"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "Y": [ 179 ]
+          }
+        },
+        "$procmux$54": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:167.25-167.41|{workspace}/user/src/sdram_init.v:167.22-174.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 58, 59, 60 ],
+            "B": [ "0", "0", "0" ],
+            "S": [ 180 ],
+            "Y": [ 150, 151, 152 ]
+          }
+        },
+        "$procmux$57": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001111"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:147.25-147.54|{workspace}/user/src/sdram_init.v:147.22-154.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 ],
+            "B": [ "0", "0", "0", "0", "0", "1", "0", "0", "0", "1", "1", "1", "0", "0", "1" ],
+            "S": [ 136 ],
+            "Y": [ 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ]
+          }
+        },
+        "$procmux$59": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ "0", "0", "1", 181, 182, 183, "1", "0", "1", 184, 185, 186, "0", "1", "1", 187, 188, 189, "1", "1", "0", 190, 191, 192 ],
+            "S": [ 193, 194, 195, 196, 197, 198, 199, 200 ],
+            "Y": [ 168, 169, 170 ]
+          }
+        },
+        "$procmux$60_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 193 ]
+          }
+        },
+        "$procmux$62": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:119.60-119.70|{workspace}/user/src/sdram_init.v:119.57-126.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "0", "1" ],
+            "S": [ 201 ],
+            "Y": [ 181, 182, 183 ]
+          }
+        },
+        "$procmux$64_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 194 ]
+          }
+        },
+        "$procmux$65_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 195 ]
+          }
+        },
+        "$procmux$67": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:104.65-104.83|{workspace}/user/src/sdram_init.v:104.62-111.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "0" ],
+            "S": [ 202 ],
+            "Y": [ 184, 185, 186 ]
+          }
+        },
+        "$procmux$72_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "1" ],
+            "Y": [ 196 ]
+          }
+        },
+        "$procmux$73_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 197 ]
+          }
+        },
+        "$procmux$75": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:85.60-85.69|{workspace}/user/src/sdram_init.v:85.57-92.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "0", "1", "0" ],
+            "S": [ 203 ],
+            "Y": [ 187, 188, 189 ]
+          }
+        },
+        "$procmux$77_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 198 ]
+          }
+        },
+        "$procmux$78_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 199 ]
+          }
+        },
+        "$procmux$80": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:70.60-70.76|{workspace}/user/src/sdram_init.v:70.57-77.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0" ],
+            "B": [ "0", "0", "0" ],
+            "S": [ 204 ],
+            "Y": [ 190, 191, 192 ]
+          }
+        },
+        "$procmux$82_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:0.0-0.0|{workspace}/user/src/sdram_init.v:67.33-136.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 123, 124, 125 ],
+            "Y": [ 200 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:158$12": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:158.28-158.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 137 ],
+            "Y": [ 204 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:187$17": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:187.60-187.85"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 203 ],
+            "Y": [ 174 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:191$18": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:191.60-191.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 202 ],
+            "Y": [ 173 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:195$19": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:195.60-195.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 201 ],
+            "Y": [ 172 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:209$21": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:209.22-209.57"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 138 ],
+            "Y": [ 203 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:210$23": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:210.22-210.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 139 ],
+            "Y": [ 202 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:211$25": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:211.22-211.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 140 ],
+            "Y": [ 201 ]
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:286$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:286.33-286.74"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 143 ],
+            "Y": [ 7 ]
+          }
+        }
+      },
+      "memories": {
+        "$auto$proc_rom.cc:155:do_switch$36": {
+          "hide_name": 1,
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "{workspace}/user/src/sdram_init.v:245.33-276.40"
+          },
+          "width": 3,
+          "start_offset": 0,
+          "size": 8
+        }
+      },
+      "netnames": {
+        "$0\\r_cnt_200us[14:0]": {
+          "hide_name": 1,
+          "bits": [ 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:141.1-155.12"
+          }
+        },
+        "$0\\r_cnt_auto_refresh[0:0]": {
+          "hide_name": 1,
+          "bits": [ 149 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:214.1-232.12"
+          }
+        },
+        "$0\\r_cnt_sysclk[2:0]": {
+          "hide_name": 1,
+          "bits": [ 150, 151, 152 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:161.1-175.12"
+          }
+        },
+        "$0\\r_cnt_sysclk_rst[0:0]": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:178.1-206.12"
+          }
+        },
+        "$0\\r_init_addr[0:0]": {
+          "hide_name": 1,
+          "bits": [ 128 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          }
+        },
+        "$0\\r_init_ba[0:0]": {
+          "hide_name": 1,
+          "bits": [ 127 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          }
+        },
+        "$0\\r_init_cmd[0:0]": {
+          "hide_name": 1,
+          "bits": [ 126 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:235.1-278.12"
+          }
+        },
+        "$0\\r_init_state[2:0]": {
+          "hide_name": 1,
+          "bits": [ 168, 169, 170 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:59.1-138.12"
+          }
+        },
+        "$1\\r_cnt_sysclk_rst[0:0]": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:178.1-206.12"
+          }
+        },
+        "$add${workspace}/user/src/sdram_init.v:153$10_Y": {
+          "hide_name": 1,
+          "bits": [ 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:153.48-153.63"
+          }
+        },
+        "$add${workspace}/user/src/sdram_init.v:173$15_Y": {
+          "hide_name": 1,
+          "bits": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:173.49-173.65"
+          }
+        },
+        "$add${workspace}/user/src/sdram_init.v:226$30_Y": {
+          "hide_name": 1,
+          "bits": [ 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:226.55-226.77"
+          }
+        },
+        "$auto$proc_rom.cc:154:do_switch$35": {
+          "hide_name": 1,
+          "bits": [ 126, 127, 128 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$104": {
+          "hide_name": 1,
+          "bits": [ 129 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$109": {
+          "hide_name": 1,
+          "bits": [ 130 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$114": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$84": {
+          "hide_name": 1,
+          "bits": [ 132 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$89": {
+          "hide_name": 1,
+          "bits": [ 133 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$94": {
+          "hide_name": 1,
+          "bits": [ 134 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2739:Not$99": {
+          "hide_name": 1,
+          "bits": [ 135 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$101": {
+          "hide_name": 1,
+          "bits": [ 135 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$106": {
+          "hide_name": 1,
+          "bits": [ 129 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$111": {
+          "hide_name": 1,
+          "bits": [ 130 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$116": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$86": {
+          "hide_name": 1,
+          "bits": [ 132 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$91": {
+          "hide_name": 1,
+          "bits": [ 133 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2743:ReduceOr$96": {
+          "hide_name": 1,
+          "bits": [ 134 ],
+          "attributes": {
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:100$3_Y": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:100.61-100.79"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:100$4_Y": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:100.85-100.111"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:104$6_Y": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:104.65-104.83"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:147$9_Y": {
+          "hide_name": 1,
+          "bits": [ 136 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:147.25-147.54"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:158$11_Y": {
+          "hide_name": 1,
+          "bits": [ 137 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:158.29-158.64"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:209$20_Y": {
+          "hide_name": 1,
+          "bits": [ 138 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:209.23-209.42"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:210$22_Y": {
+          "hide_name": 1,
+          "bits": [ 139 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:210.23-210.43"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:211$24_Y": {
+          "hide_name": 1,
+          "bits": [ 140 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:211.23-211.43"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:220$28_Y": {
+          "hide_name": 1,
+          "bits": [ 141 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:220.25-220.50"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:224$29_Y": {
+          "hide_name": 1,
+          "bits": [ 142 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:224.25-224.58"
+          }
+        },
+        "$eq${workspace}/user/src/sdram_init.v:286$33_Y": {
+          "hide_name": 1,
+          "bits": [ 143 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:286.34-286.59"
+          }
+        },
+        "$logic_and${workspace}/user/src/sdram_init.v:100$5_Y": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:100.60-100.112"
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:143$8_Y": {
+          "hide_name": 1,
+          "bits": [ 144 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:143.20-143.31"
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:163$14_Y": {
+          "hide_name": 1,
+          "bits": [ 145 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:163.20-163.31"
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:216$27_Y": {
+          "hide_name": 1,
+          "bits": [ 146 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:216.20-216.31"
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:237$32_Y": {
+          "hide_name": 1,
+          "bits": [ 147 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:237.20-237.31"
+          }
+        },
+        "$logic_not${workspace}/user/src/sdram_init.v:61$2_Y": {
+          "hide_name": 1,
+          "bits": [ 148 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:61.20-61.31"
+          }
+        },
+        "$procmux$41_Y": {
+          "hide_name": 1,
+          "bits": [ 171 ],
+          "attributes": {
+          }
+        },
+        "$procmux$42_CMP": {
+          "hide_name": 1,
+          "bits": [ 142 ],
+          "attributes": {
+          }
+        },
+        "$procmux$44_Y": {
+          "hide_name": 1,
+          "bits": [ 149 ],
+          "attributes": {
+          }
+        },
+        "$procmux$45_CMP": {
+          "hide_name": 1,
+          "bits": [ 141 ],
+          "attributes": {
+          }
+        },
+        "$procmux$47_Y": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+          }
+        },
+        "$procmux$48_CMP": {
+          "hide_name": 1,
+          "bits": [ 175 ],
+          "attributes": {
+          }
+        },
+        "$procmux$49_CMP": {
+          "hide_name": 1,
+          "bits": [ 176 ],
+          "attributes": {
+          }
+        },
+        "$procmux$50_CMP": {
+          "hide_name": 1,
+          "bits": [ 177 ],
+          "attributes": {
+          }
+        },
+        "$procmux$51_CMP": {
+          "hide_name": 1,
+          "bits": [ 178 ],
+          "attributes": {
+          }
+        },
+        "$procmux$52_CMP": {
+          "hide_name": 1,
+          "bits": [ 179 ],
+          "attributes": {
+          }
+        },
+        "$procmux$54_Y": {
+          "hide_name": 1,
+          "bits": [ 150, 151, 152 ],
+          "attributes": {
+          }
+        },
+        "$procmux$55_CMP": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+          }
+        },
+        "$procmux$57_Y": {
+          "hide_name": 1,
+          "bits": [ 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167 ],
+          "attributes": {
+          }
+        },
+        "$procmux$58_CMP": {
+          "hide_name": 1,
+          "bits": [ 136 ],
+          "attributes": {
+          }
+        },
+        "$procmux$59_Y": {
+          "hide_name": 1,
+          "bits": [ 168, 169, 170 ],
+          "attributes": {
+          }
+        },
+        "$procmux$60_CMP": {
+          "hide_name": 1,
+          "bits": [ 193 ],
+          "attributes": {
+          }
+        },
+        "$procmux$62_Y": {
+          "hide_name": 1,
+          "bits": [ 181, 182, 183 ],
+          "attributes": {
+          }
+        },
+        "$procmux$63_CMP": {
+          "hide_name": 1,
+          "bits": [ 201 ],
+          "attributes": {
+          }
+        },
+        "$procmux$64_CMP": {
+          "hide_name": 1,
+          "bits": [ 194 ],
+          "attributes": {
+          }
+        },
+        "$procmux$65_CMP": {
+          "hide_name": 1,
+          "bits": [ 195 ],
+          "attributes": {
+          }
+        },
+        "$procmux$67_Y": {
+          "hide_name": 1,
+          "bits": [ 184, 185, 186 ],
+          "attributes": {
+          }
+        },
+        "$procmux$68_CMP": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+          }
+        },
+        "$procmux$70_Y": {
+          "hide_name": 1,
+          "bits": [ 184, 185, 186 ],
+          "attributes": {
+          }
+        },
+        "$procmux$71_CMP": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+          }
+        },
+        "$procmux$72_CMP": {
+          "hide_name": 1,
+          "bits": [ 196 ],
+          "attributes": {
+          }
+        },
+        "$procmux$73_CMP": {
+          "hide_name": 1,
+          "bits": [ 197 ],
+          "attributes": {
+          }
+        },
+        "$procmux$75_Y": {
+          "hide_name": 1,
+          "bits": [ 187, 188, 189 ],
+          "attributes": {
+          }
+        },
+        "$procmux$76_CMP": {
+          "hide_name": 1,
+          "bits": [ 203 ],
+          "attributes": {
+          }
+        },
+        "$procmux$77_CMP": {
+          "hide_name": 1,
+          "bits": [ 198 ],
+          "attributes": {
+          }
+        },
+        "$procmux$78_CMP": {
+          "hide_name": 1,
+          "bits": [ 199 ],
+          "attributes": {
+          }
+        },
+        "$procmux$80_Y": {
+          "hide_name": 1,
+          "bits": [ 190, 191, 192 ],
+          "attributes": {
+          }
+        },
+        "$procmux$81_CMP": {
+          "hide_name": 1,
+          "bits": [ 204 ],
+          "attributes": {
+          }
+        },
+        "$procmux$82_CMP": {
+          "hide_name": 1,
+          "bits": [ 200 ],
+          "attributes": {
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:158$12_Y": {
+          "hide_name": 1,
+          "bits": [ 204 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:158.28-158.79"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:187$17_Y": {
+          "hide_name": 1,
+          "bits": [ 174 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:187.60-187.85"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:191$18_Y": {
+          "hide_name": 1,
+          "bits": [ 173 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:191.60-191.86"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:195$19_Y": {
+          "hide_name": 1,
+          "bits": [ 172 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:195.60-195.86"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:209$21_Y": {
+          "hide_name": 1,
+          "bits": [ 203 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:209.22-209.57"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:210$23_Y": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:210.22-210.58"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:211$25_Y": {
+          "hide_name": 1,
+          "bits": [ 201 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:211.22-211.58"
+          }
+        },
+        "$ternary${workspace}/user/src/sdram_init.v:286$34_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:286.33-286.74"
+          }
+        },
+        "i_sysclk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:3.25-3.33"
+          }
+        },
+        "i_sysrst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:4.25-4.35"
+          }
+        },
+        "o_init_addr": {
+          "hide_name": 0,
+          "bits": [ 6, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:8.25-8.36"
+          }
+        },
+        "o_init_ba": {
+          "hide_name": 0,
+          "bits": [ 5, "0" ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:7.25-7.34"
+          }
+        },
+        "o_init_cmd": {
+          "hide_name": 0,
+          "bits": [ 4, "0", "0", "0" ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:6.25-6.35"
+          }
+        },
+        "o_init_done": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:9.25-9.36"
+          }
+        },
+        "r_cnt_200us": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:20.17-20.28"
+          }
+        },
+        "r_cnt_auto_refresh": {
+          "hide_name": 0,
+          "bits": [ 90 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:23.17-23.35"
+          }
+        },
+        "r_cnt_sysclk": {
+          "hide_name": 0,
+          "bits": [ 55, 56, 57 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:21.17-21.29"
+          }
+        },
+        "r_cnt_sysclk_rst": {
+          "hide_name": 0,
+          "bits": [ 180 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:22.17-22.33"
+          }
+        },
+        "r_init_addr": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:26.17-26.28"
+          }
+        },
+        "r_init_ba": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:25.17-25.26"
+          }
+        },
+        "r_init_cmd": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:24.17-24.27"
+          }
+        },
+        "r_init_state": {
+          "hide_name": 0,
+          "bits": [ 123, 124, 125 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:19.17-19.29"
+          }
+        },
+        "w_tmrd_end": {
+          "hide_name": 0,
+          "bits": [ 201 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:16.17-16.27"
+          }
+        },
+        "w_trfc_end": {
+          "hide_name": 0,
+          "bits": [ 202 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:15.17-15.27"
+          }
+        },
+        "w_trp_end": {
+          "hide_name": 0,
+          "bits": [ 203 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:14.17-14.26"
+          }
+        },
+        "w_wait_200us_end": {
+          "hide_name": 0,
+          "bits": [ 204 ],
+          "attributes": {
+            "src": "{workspace}/user/src/sdram_init.v:13.17-13.33"
+          }
+        }
+      }
+    }
+  }
+}
