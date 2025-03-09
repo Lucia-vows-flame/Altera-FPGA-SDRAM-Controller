@@ -1,15 +1,9 @@
-`timescale 1ns/1ns
-module tb_sdram_init();
+`timescale 1ns/1ps
+module tb_sdram_ctrl();
 
 //inports reg
 reg     i_sysclk;
 reg     i_sysrst_n;
-
-// outports wire
-wire [3:0]  	o_init_cmd;
-wire [1:0]  	o_init_ba;
-wire [12:0] 	o_init_addr;
-wire        	o_init_done;
 
 //wire definitions
 wire    clk_50m         ;
@@ -17,6 +11,16 @@ wire    clk_100m        ;
 wire    clk_100m_shift  ;
 wire    locked          ;
 wire    sysnrst_n       ;
+
+//使用 PLL 产生所需的时钟信号
+clk_gen	clk_gen_inst (
+	.areset ( !i_sysrst_n ),//PLL的复位信号是高电平有效
+	.inclk0 ( i_sysclk ),
+	.c0 ( clk_50m ),
+	.c1 ( clk_100m ),
+	.c2 ( clk_100m_shift ),
+	.locked ( locked )
+	);
 
 //初始化时钟和复位
 initial begin
@@ -32,24 +36,42 @@ always #10 i_sysclk = ~i_sysclk;
 //生成复位信号，这个复位信号在时钟稳定后撤掉
 assign  sysrst_n = i_sysrst_n & locked;
 
-//使用 PLL 产生所需的时钟信号
-clk_gen	clk_gen_inst (
-	.areset ( !i_sysrst_n ),//PLL的复位信号是高电平有效
-	.inclk0 ( i_sysclk ),
-	.c0 ( clk_50m ),
-	.c1 ( clk_100m ),
-	.c2 ( clk_100m_shift ),
-	.locked ( locked )
-	);
+//实例化sdram_ctrl
+// sdram_ctrl outports wire
+wire        	o_init_done;
+wire        	o_wr_ack;
+wire [15:0] 	o_rd_data;
+wire        	o_rd_ack;
+wire        	o_sdram_cke;
+wire        	o_sdram_cs_n;
+wire        	o_sdram_cas_n;
+wire        	o_sdram_ras_n;
+wire        	o_sdram_we_n;
+wire [1:0]  	o_sdram_ba;
+wire [12:0] 	o_sdram_addr;
 
-//实例化sdram_init
-sdram_init u_sdram_init(
-	.i_sysclk    	( clk_100m     ),
-	.i_sysrst_n  	( sysrst_n     ),
-	.o_init_cmd  	( o_init_cmd   ),
-	.o_init_ba   	( o_init_ba    ),
-	.o_init_addr 	( o_init_addr  ),
-	.o_init_done 	( o_init_done  )
+sdram_ctrl u_sdram_ctrl(
+	.i_sysclk       	( clk_100m        ),
+	.i_sysrst_n     	( sysrst_n        ),
+	.o_init_done    	( o_init_done     ),
+	.i_wr_req       	( i_wr_req        ),
+	.i_wr_addr      	( i_wr_addr       ),
+	.i_wr_burst_len 	( i_wr_burst_len  ),
+	.i_wr_data      	( i_wr_data       ),
+	.o_wr_ack       	( o_wr_ack        ),
+	.i_rd_req       	( i_rd_req        ),
+	.i_rd_addr      	( i_rd_addr       ),
+	.i_rd_burst_len 	( i_rd_burst_len  ),
+	.o_rd_data      	( o_rd_data       ),
+	.o_rd_ack       	( o_rd_ack        ),
+	.o_sdram_cke    	( o_sdram_cke     ),
+	.o_sdram_cs_n   	( o_sdram_cs_n    ),
+	.o_sdram_cas_n  	( o_sdram_cas_n   ),
+	.o_sdram_ras_n  	( o_sdram_ras_n   ),
+	.o_sdram_we_n   	( o_sdram_we_n    ),
+	.o_sdram_ba     	( o_sdram_ba      ),
+	.o_sdram_addr   	( o_sdram_addr    ),
+	.sdram_dq       	( sdram_dq        )
 );
 
 //使用sdram_model_plus进行仿真，sdram_model_plus是sdram的仿真模型
